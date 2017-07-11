@@ -1,0 +1,117 @@
+<html> 
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css" />
+		<title>cats</title> 
+		<style> 	
+		</style>
+		<script>
+			function banner(){ 
+				var text = confirm("Do you want to go to Cat wikipedia?"); 
+					return text; 
+					}
+			function answer(){ 
+				var radio = document.getElementsByName("trivia");
+				var selection = false;
+				var message = ""; 
+				for( var i = 0; i < radio.length; i++) {
+					if(radio[i].value == "Claws" && radio[i].checked == true) {
+						selection = true; 
+					} //end if statement 
+				} //end for loop
+				if(selection == true) {
+					message = message + "<b><p style='color:green'>Way to go!</p></b>"; 
+					} else { 
+					message = message + "<b><p style='color:red'>Try again my friend.</p></b>"; 
+					}
+					document.getElementById("response").innerHTML = message;
+
+			} //end function answer
+
+				
+		</script>
+	</head> 
+	<body id="background"> 
+		<a href="https://en.wikipedia.org/wiki/Cat" onclick="return banner()">
+			<header style=color:red;> <center> CATS </center> </header>
+		</a>
+		<nav> 
+			<ul id="navmenu">
+			<li class="navitem"> <a href="index.html"> Home</a></li>
+			<li class="navitem"> <a href="games.html"> Games </a> </li>
+			<li class="navitem"> <a href="imagegallery.html"> Image Gallery </a> </li>
+			</ul>
+		</nav>
+		
+		<div id="rightside">
+
+			<div class="wrap-list"> 
+		<h2>Cat Trivia Question:</h2>
+		<p class="p1">What do cats have?</p>
+		<form> 
+			<div id="response"></div>
+			<input type="radio" name="trivia" value="Claws"> Claws<br> 
+			<input type="radio" name="trivia" value="Trunks"> Trunks <br>
+			<input type="radio" name="trivia" value="Antenna"> Antenna<br>
+			<input type="radio" name="trivia" value="Wings"> Wings <br> 
+			<input type="button" id="submit" value="Click Here" onclick="answer()">
+		</form>
+	</div> 
+
+		</div>
+
+<div id="leftside">
+
+	<span class="wrap-text"><h1>Cat Facts</h1></span>
+		
+		<p> Cats are my <b>favorite</b> animal.</br> They have claws and are furry.</br> They are <u>nocturnal</u> which means they are active at night.</br> I <i>love</i> cats.
+		</p>
+
+		<ol>
+			<li class="list"> Cats have claws </li>
+			<li class="list"> Cats are furry </li>
+			<li class="list"> Cats are nocturnal </li>
+		</ol> 
+
+</div>
+
+<div class="clearfloat"> </div>
+
+	
+
+
+
+<!--    this is an example of a creepy bunny video 
+<video width="400" height="220" controls autoplay>
+<source src="http://www.w3schools.com/HTML/mov_bbb.mp4" type="video/mp4">
+<source src="http://www.w3schools.com/HTML/mov_bbb.ogg" type="video/ogg">
+Your browser does not support HTML5 video.
+</video> 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y5bMetpboq8?rel=0" frameborder="0" allowfullscreen></iframe> -->
+
+<video width="600" height="315" controls autoplay>
+<source src="kittyplay.mp4" type="video/mp4">
+</video>
+<br/>
+
+<!-- this is example of horse sound <audio width="400" height="220" controls autoplay>
+<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+Your browser does not support HTML 5 audio.
+</audio> -->
+
+<audio width="400" height="220" controls autoplay>
+<source src="meowing.m4a" type="audio/mp3">
+Your browser does not support HTML 5 audio.
+</audio> 
+
+<br/>
+
+
+
+		<img src="kitty1.jpg" width="600" height="600"/>
+		<img src="kitty2.jpg" width="600" height="600"/>
+		<hr> 
+		<center>Blaze <a href="https://en.wikipedia.org/wiki/Cat"target="_blank">My Favorite Website</a></center>
+	</body> 
+	<footer>Made by Cat Boy </footer>
+</html>
